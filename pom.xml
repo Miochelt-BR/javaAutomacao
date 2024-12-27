@@ -14,6 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cucumber.version>7.11.1</cucumber.version>
         <selenium.version>4.10.0</selenium.version>
+        <junit.version>5.7.2</junit.version>  <!-- JUnit 5 -->
     </properties>
 
     <dependencies>
@@ -40,6 +41,28 @@
             <version>${selenium.version}</version>
         </dependency>
 
+        <!-- WebDriverManager para gerenciar drivers -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit 5 para suporte aos testes Cucumber -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -54,6 +77,19 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
+            <!-- Plugin para execução de testes Cucumber com JUnit -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <includes>
+                        <include>**/Test*.java</include> <!-- Ajuste conforme necessário -->
+                    </includes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
 </project>
