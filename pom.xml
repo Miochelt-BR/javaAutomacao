@@ -17,7 +17,7 @@
     </properties>
 
     <dependencies>
-        <!-- CUCUMBER: PARA O JUNIT EXECUTAR -->
+        <!-- Cucumber: Para o JUnit executar -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
@@ -25,7 +25,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- CUCUMBER: PARA INTERPRETAR O BDD -->
+        <!-- Cucumber: Para interpretar o BDD -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -33,12 +33,13 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- SELENIUM -->
+        <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -48,8 +49,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>8</source>
+                    <target>8</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
         </plugins>
