@@ -4,15 +4,9 @@ import io.cucumber.java.it.Quando;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
 public class DescontoSteps {
     WebDriver driver = new ChromeDriver();
@@ -30,7 +24,6 @@ public class DescontoSteps {
 
     @Quando("clico em ganhar cupom")
     public void clico_em_ganhar_cupom() {
-
 
 
     }
